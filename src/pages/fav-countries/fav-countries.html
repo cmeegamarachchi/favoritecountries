@@ -1,4 +1,3 @@
-
 <ion-header>
   <ion-navbar>
     <ion-title>Favorite Countries</ion-title>
@@ -6,59 +5,16 @@
 </ion-header>
 
 <ion-content class="cards-bg">
-  <ion-card>
-    <img src="https://restcountries.eu/data/lka.svg" alt="flag of Sri Lanka">
+  <ion-card *ngFor="let country of favoriteCountries">
+    <img [src]="country.flag" alt="flag of {{country.name}}">
 
     <ion-card-content>
       <ion-card-title>
-        Sri Lanka
+        {{country.name}}
       </ion-card-title>
       <p>
-        South Asia
+        {{country.region}}
       </p>
     </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Favorite
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-      </ion-col>
-    </ion-row>
-  </ion-card>
-
-  <ion-card>
-    <img src="https://restcountries.eu/data/aus.svg" alt="flag of Australia">
-
-    <ion-card-content>
-      <ion-card-title>
-        Australia
-      </ion-card-title>
-      <p>
-        Oceania
-      </p>
-    </ion-card-content>
-
-    <ion-row no-padding>
-      <ion-col>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='star'></ion-icon>
-          Favorite
-        </button>
-      </ion-col>
-      <ion-col text-right>
-        <button ion-button clear small color="danger" icon-start>
-          <ion-icon name='share-alt'></ion-icon>
-          Share
-        </button>
-      </ion-col>
-    </ion-row>
   </ion-card>
 </ion-content>
