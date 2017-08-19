@@ -7,7 +7,7 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let country of countries">
+    <ion-item *ngFor="let country of countries" (click)="onCountryClick(country)">
       <ion-avatar item-start>
         <img [src]="country.flag" alt="flag of {{country.name}}">
       </ion-avatar>

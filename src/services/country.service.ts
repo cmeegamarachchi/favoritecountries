@@ -20,4 +20,20 @@ export class CountryService {
 
     return [ sriLanka,  australia ];
   }
+
+  removeFromFavorite(country: Country){
+    let match = this.countries.find((c: Country) => c.name == country.name);
+
+    if (match != null){
+      match.isFavorite = false;
+    }
+  }
+
+  addToFavorite(country: Country){
+    let match = this.countries.find((c: Country) => c.name == country.name);
+
+    if (match != null){
+      match.isFavorite = true;
+    }
+  }
 }
