@@ -3,4 +3,8 @@ export class Country {
   flag: string;
   region: string;
   isFavorite: boolean;
+
+  constructor(){
+    this.isFavorite = false;
+  }
 }

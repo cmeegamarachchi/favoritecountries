@@ -11,6 +11,7 @@ import {TabsPage} from "../pages/tabs/tabs";
 import {AllCountriesPageModule} from "../pages/all-countries/all-countries.module";
 import {FavCountriesPageModule} from "../pages/fav-countries/fav-countries.module";
 import {CountryService} from "../services/country.service";
+import {HttpModule} from "@angular/http";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {CountryService} from "../services/country.service";
   ],
   imports: [
     BrowserModule,
+    HttpModule,
 
     AllCountriesPageModule,
     FavCountriesPageModule,
