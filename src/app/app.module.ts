@@ -8,6 +8,8 @@ import { MyApp } from './app.component';
 
 import {TabsPageModule} from "../pages/tabs/tabs.module";
 import {TabsPage} from "../pages/tabs/tabs";
+import {AllCountriesPageModule} from "../pages/all-countries/all-countries.module";
+import {FavCountriesPageModule} from "../pages/fav-countries/fav-countries.module";
 
 @NgModule({
   declarations: [
@@ -15,7 +17,11 @@ import {TabsPage} from "../pages/tabs/tabs";
   ],
   imports: [
     BrowserModule,
+
+    AllCountriesPageModule,
+    FavCountriesPageModule,
     TabsPageModule,
+
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
