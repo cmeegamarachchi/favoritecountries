@@ -10,6 +10,7 @@ import {TabsPageModule} from "../pages/tabs/tabs.module";
 import {TabsPage} from "../pages/tabs/tabs";
 import {AllCountriesPageModule} from "../pages/all-countries/all-countries.module";
 import {FavCountriesPageModule} from "../pages/fav-countries/fav-countries.module";
+import {CountryService} from "../services/country.service";
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {FavCountriesPageModule} from "../pages/fav-countries/fav-countries.modul
   providers: [
     StatusBar,
     SplashScreen,
+    CountryService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
