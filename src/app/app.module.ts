@@ -13,6 +13,7 @@ import {FavCountriesPageModule} from "../pages/fav-countries/fav-countries.modul
 import {CountryService} from "../services/country.service";
 import {HttpModule} from "@angular/http";
 import {SettingsPageModule} from "../pages/settings/settings.module";
+import {ApplicationStateService} from "../services/application-state.service";
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {SettingsPageModule} from "../pages/settings/settings.module";
   providers: [
     StatusBar,
     SplashScreen,
+    ApplicationStateService,
     CountryService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
