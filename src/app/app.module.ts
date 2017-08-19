@@ -12,6 +12,7 @@ import {AllCountriesPageModule} from "../pages/all-countries/all-countries.modul
 import {FavCountriesPageModule} from "../pages/fav-countries/fav-countries.module";
 import {CountryService} from "../services/country.service";
 import {HttpModule} from "@angular/http";
+import {SettingsPageModule} from "../pages/settings/settings.module";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {HttpModule} from "@angular/http";
 
     AllCountriesPageModule,
     FavCountriesPageModule,
+    SettingsPageModule,
     TabsPageModule,
 
     IonicModule.forRoot(MyApp)
