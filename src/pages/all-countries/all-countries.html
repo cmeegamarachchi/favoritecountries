@@ -7,22 +7,12 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item>
+    <ion-item *ngFor="let country of countries">
       <ion-avatar item-start>
-        <img src="https://restcountries.eu/data/aus.svg" alt="flag of Australia">
+        <img [src]="country.flag" alt="flag of {{country.name}}">
       </ion-avatar>
-      <h2>Australia</h2>
-      <h3>AUS</h3>
-      <p>Oceania</p>
-    </ion-item>
-
-    <ion-item>
-      <ion-avatar item-start>
-        <img src="https://restcountries.eu/data/lka.svg" alt="flag of Sri Lanka">
-      </ion-avatar>
-      <h2>Sri Lanka</h2>
-      <h3>LKA</h3>
-      <p>South Asia</p>
+      <h2>{{country.name}}</h2>
+      <h3>{{country.region}}</h3>
     </ion-item>
   </ion-list>
 </ion-content>

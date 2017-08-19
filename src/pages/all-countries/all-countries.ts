@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the AllCountriesPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+import { IonicPage} from 'ionic-angular';
+import {Country} from "../../services/country.model";
+import {CountryService} from "../../services/country.service";
 
 @IonicPage()
 @Component({
@@ -15,11 +10,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AllCountriesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(private _countrySvc: CountryService) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AllCountriesPage');
+  get countries() : Country[] {
+    return this._countrySvc.countries;
   }
 
 }
