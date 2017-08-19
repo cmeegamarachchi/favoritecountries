@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {AlertController, IonicPage} from 'ionic-angular';
 import {Country} from "../../services/country.model";
 import {CountryService} from "../../services/country.service";
+import {ApplicationStateService} from "../../services/application-state.service";
 
 @IonicPage()
 @Component({
@@ -10,7 +11,13 @@ import {CountryService} from "../../services/country.service";
 })
 export class AllCountriesPage {
 
-  constructor(private _alertCtrl: AlertController,  private _countrySvc: CountryService) {
+  constructor(private _alertCtrl: AlertController,
+              private _countrySvc: CountryService,
+              private _applicationStateService: ApplicationStateService) {
+  }
+
+  get enableThumbnailStatus() : boolean {
+    return this._applicationStateService.displayFlagThumbnail;
   }
 
   get countries() : Country[] {

@@ -15,7 +15,7 @@ export class SettingsPage {
   constructor(public navCtrl: NavController, private _applicationStateService: ApplicationStateService) {
   }
 
-  get enableFlagThumbnale(){
+  get enableFlagThumbnale() : boolean{
     return this._applicationStateService.displayFlagThumbnail;
   }
 

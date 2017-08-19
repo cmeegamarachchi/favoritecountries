@@ -15,7 +15,7 @@
 <ion-content padding>
   <ion-list>
     <ion-item *ngFor="let country of countries" (click)="onCountryClick(country)">
-      <ion-avatar item-start>
+      <ion-avatar item-start *ngIf="enableThumbnailStatus">
         <img [src]="country.flag" alt="flag of {{country.name}}">
       </ion-avatar>
       <h2>{{country.name}}</h2>
